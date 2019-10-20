@@ -1300,6 +1300,7 @@ a{
 		border-radius:10px 0px 0px 10px ;
 		float: left;
 		color: white;
+		overflow: hidden;
 		position: relative;
 	}
 	
@@ -1341,6 +1342,7 @@ a{
 		background:rgba(240,255,255,0.7);
 		float: left;
 		position: relative;
+		overflow: hidden;
 	}
 	
 	.art_right > .right_circle{
