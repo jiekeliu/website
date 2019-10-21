@@ -237,7 +237,7 @@
 			<div class="study">
 				<div class="std_content">
 					<div class="std_con_left">
-						<img src="img/food.jpg"/>
+						<img src="img/food.jpg" alt="study"/>
 					</div>
 					<div class="std_con_right">
 						<div class="con_title">
@@ -256,7 +256,7 @@
 				</div>
 				<div class="std_content">
 					<div class="std_con_left">
-						<img src="img/0.jpg"/>
+						<img src="img/0.jpg"  alt="study"/>
 					</div>
 					<div class="std_con_right">
 						<div class="con_title">
@@ -396,16 +396,49 @@
 					<a href="#">更 &nbsp; 多....</a>
 				</div>
 				<p id="pso" class="ach_exh">问题解答 ---- 遇到问题不知解</p>
-				<p>"成果展示" 模块，是我学IT以来所写的比较完整的代码成果，首页展示的是我第一个比较完整的代码成果，
-					由纯css代码实现，不含js。了解更多成果，请点击  <a href="#">more>>></a> 
+				<p>"问提解答" 模块，是我生活和学习中遇到的问题，有些问题解决了，我和大家分享，
+					希望为遇到相同问题的朋友提供帮助。没有解决的，希望有好心人帮我解惑。
+					了解更多成果，请点击  <a href="#">more>>></a> 
 				</p>
 			</div>
 			<div class="pso_content">
+				<div class="pso_dot1">	</div>
+				<div class="pso_dot2">	</div>
 				<div class="problem">
-					
+					怎样在centos7中安装python3且安装pip？
+				</div>
+				<div class="pso_img">
+					<img src="img/problem.jpg" alt="problem"/>
 				</div>
 				<div class="solve">
-					
+					<div class="solve_txt">
+						<p>
+							1.https://www.python.org/downloads/source/ 下载你想要的python版本
+						通过winSCP（或其他方法）上传到linux主（这样最快，在linux下载太慢了）,   tar -zxvf  
+						tgz压缩文件, cd 解压文件夹
+						</p>
+						<p> 
+							2.准备编译环境 :<br />
+							yum install gcc-c++ //安装c++编译环境<br />
+							yum install zlib* openssl*  //安装依赖包，和pip有关<br />
+							yum install readline-devel*   //和python3 删除键有关<br />
+						</p>	
+						<p>
+							3.预编译  : ./configure --prefix=安装地址 --enable-optimizations 
+						</p> 
+						<p>
+							4.编译: make
+						</p>
+						<p>
+							5.安装: make install
+						</p>
+						<p>
+							6.建立链接（不建立也行，就是不方便）: ln -s 源地址   shell地址 /usr/bin/
+						</p>
+						<p>
+							7.下载模块 : python3 -m pip install module_name
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -420,7 +453,7 @@
 			<div class="mav_content">
 				<div class="photo_plate">
 					<div class="picture">
-						<img src="img/timg.jpg"/>
+						<img src="img/timg.jpg" alt="music"/>
 					</div>
 					<div class="photo_txt">
 						<p class="singer">G.E.M.邓紫棋</p>
@@ -429,7 +462,7 @@
 				</div>
 				<div class="photo_plate">
 					<div class="picture">
-						<img src="img/mangzhong.jpg"/>
+						<img src="img/mangzhong.jpg" alt="music"/>
 					</div>
 					<div class="photo_txt">
 						<p class="singer">赵方婧</p>
@@ -438,7 +471,7 @@
 				</div>
 				<div class="photo_plate">
 					<div class="picture">
-						<img src="img/lonely.jpg"/>
+						<img src="img/lonely.jpg" alt="music"/>
 					</div>
 					<div class="photo_txt">
 						<p class="singer">MC画词戏子</p>
@@ -457,7 +490,7 @@
 			<p id="about_me" class="mav">关于我 ---- 天上独此一颗星</p>
 			<div class="abt_cotent">
 				<div class="abt_picture">
-					<img src="img/1.jpg"/>
+					<img src="img/1.jpg" alt="aboutMe"/>
 				</div>
 				<div class="abt_info">
 					<p> <b>网名：</b>Jsonker  &nbsp;&nbsp; &nbsp; &nbsp; <b>原名：</b> 刘杰 </p>

@@ -1391,7 +1391,73 @@ a{
 	.pso_content{
 		width: 100%;
 		min-height: 600px;
-		background-color: white;
+		background-color: #f6f6f6;
+		border-radius: 10px;
+		position: relative;
+	}
+	
+	.problem{
+		min-width: 200px;
+		height: 30px;
+		border-radius: 25px ;
+		border: 2px solid greenyellow; 
+		position: absolute;
+		top: 50px;
+		left: 20%;
+		padding: 10px 30px;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 30px;
+		letter-spacing: 5px;
+	}
+	
+	.pso_dot1{
+		width: 20px;
+		height: 20px;
+		border-radius:50%;
+		border: 2px solid greenyellow; 
+		position: absolute;
+		top: 200px;
+		left: 20%;
+	}
+	
+	.pso_dot2{
+		width: 40px;
+		height: 20px;
+		border-radius:20px;
+		border: 2px solid greenyellow; 
+		position: absolute;
+		top: 140px;
+		left: 25%;
+	}
+	
+	.pso_img{
+		width: 250px;
+		position: absolute;
+		top: 250px;
+		left: 50px;
+	}
+	
+	.pso_img > img{
+		width: 100%;
+	}
+	
+	.solve{
+		width: 65%;
+		min-height: 400px;
+		margin:0px 5% 50px 30% ;
+		padding-top: 200px;
+		padding-bottom: 30px;
+	}
+	
+	.solve_txt{
+		width: 100%;
+		border: 2px solid #00BFFF;
+		border-radius:10px ;
+		padding: 20px;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 30px;
 	}
 
 /*<!-- -----------------------------problem_solve_module  ------------------end--------- -->*/
@@ -1460,15 +1526,14 @@ a{
 
 	.abt_cotent{
 		width: 100%;
-		height: 450px;
+		height: 500px;
 		/*background-color: grey;*/
 		position: relative;
 	}
 	
 	.abt_picture{
 		width: 300px;
-		height: 300px;
-		border: 2px solid #C0C0C0;
+		border: 2px solid deepskyblue;
 		border-radius:10px ;
 		background-color: #f7f7f7;
 		padding: 20px;
@@ -1489,6 +1554,7 @@ a{
 		position: absolute;
 		top: 50px;
 		left: 45%;
+		color: grey;
 	}
 	
 	.abt_info > p{
