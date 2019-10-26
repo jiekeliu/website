@@ -1,0 +1,16 @@
+.layui-colla-title{
+     background: #222;
+     color: #fff;
+}
+.layui-collapse ,.layui-colla-item,.layui-colla-content{
+	 border: none;
+}
+
+.layui-nav-tree{
+	width: 100%;
+}
+
+.menu{
+    width: 100%;
+	background: #333744;
+}

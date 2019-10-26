@@ -205,6 +205,29 @@ a{
 
 
 /*----------right_fix_module---------- */
+	.login_w > a{
+		color: #fff;
+	}
+
+	.login_w > a:hover{
+		color: yellow;
+	}
+
+	.backstage_w > a{
+		color: #fff;
+	}
+
+	.backstage_w > a:hover{
+		color: yellow;
+	}
+
+	.github_w > a{
+		color: #fff;
+	}
+
+	.github_w > a:hover{
+		color: yellow;
+	}
 
 	.login_content{
 		height: 60px;
@@ -325,7 +348,7 @@ a{
 	.bg_welcome{
 		width: 100%;
 		height: 300px;
-		background-image: url(../bg_welcome.jpg);	
+		background-image: url(../img/bg_welcome.jpg);	
 	}
 /*<!-- ----------------------------bg_welcome_module ------------------------end -->*/
 
