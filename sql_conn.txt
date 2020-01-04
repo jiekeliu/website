@@ -1,0 +1,4 @@
+localhost
+newweb09
+root
+root

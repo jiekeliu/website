@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人测试：Jsonker学习网站</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="row"style="margin-top: 200px;" id="con">
+  		<div class="col-xs-12 col-md-6 col-md-offset-3">
+  			<div class="panel panel-info">
+			  <div class="panel-heading">
+			  	你正在访问的是网站信息录入页面，请在下面的输入框中录入相关信息，提交后我们会将信息录入数据库
+			  	，如果失败，请查看相应提示，成功则进入下一步。
+			  </div>
+			  <div class="panel-body">
+			    <form action="" method="post" id="form">
+			    	<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">用户名</span>
+					  <input type="text" class="form-control" placeholder="jsonker" name="uname" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="" style="height: 15px;width: 100%;"></div>
+					
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">密码</span>
+					  <input type="text" class="form-control" placeholder="1234567" name="upwd" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="" style="height: 15px;width: 100%;"></div>
+					
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">邮箱</span>
+					  <input type="text" class="form-control" placeholder="1234@qq.com" id="uemall" name="uemall" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="" style="height: 15px;width: 100%;"></div>
+					
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">网站名称</span>
+					  <input type="text" class="form-control" placeholder="myweb" name="web_name" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="" style="height: 15px;width: 100%;"></div>
+						<button type="button" class="btn btn-primary btn-default btn-block" id="submit_btn">提交</button>
+					<div class="input-group">
+					  
+					</div>
+			    </form>
+			  </div>
+			</div>
+  		</div>
+  	</div>
+    
+
+    <script src="../../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/web_datebase.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人测试：Jsonker学习网站</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="row"style="margin-top: 200px;" id="con">
+  		<div class="col-xs-12 col-md-6 col-md-offset-3">
+  			<div class="panel panel-info">
+			  <div class="panel-heading">
+			  	你正在访问的是数据库信息录入页面，请在下面的输入框中录入相关信息，提交后我们将检测该数据库的连通性
+			  	，如果失败，请检查你输入的信息和你的数据库是否匹配，成功则进入下一步。
+			  </div>
+			  <div class="panel-body">
+			    <form action="" method="post" id="form">
+			    	<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">主机名</span>
+					  <input type="text" class="form-control" placeholder="localhost" name="hostname" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="" style="height: 15px;width: 100%;"></div>
+					
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">数据库</span>
+					  <input type="text" class="form-control" placeholder="database" name="dbname" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="" style="height: 15px;width: 100%;"></div>
+					
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">用户</span>
+					  <input type="text" class="form-control" placeholder="username" name="username" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="" style="height: 15px;width: 100%;"></div>
+					
+					<div class="input-group">
+					  <span class="input-group-addon" id="basic-addon1">密码</span>
+					  <input type="text" class="form-control" placeholder="password" name="pwd" aria-describedby="basic-addon1">
+					</div>
+					
+					<div class="" style="height: 15px;width: 100%;"></div>
+						<button type="button" class="btn btn-primary btn-default btn-block" id="submit_btn">提交</button>
+					<div class="input-group">
+					  
+					</div>
+			    </form>
+			  </div>
+			</div>
+  		</div>
+  	</div>
+    
+
+    <script src="../../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/web_conn_sql.js"></script>
+  </body>
+</html>

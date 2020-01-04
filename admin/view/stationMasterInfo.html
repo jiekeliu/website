@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人测试：Jsonker学习网站</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/index.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="" style="height: 50px;width: 100%;"></div>
+  	<div class="container">
+  		<form class="form-horizontal" id="form">
+			  <div class="form-group">
+			    <label for="name" class="col-sm-1 control-label">姓名：</label>
+			    <div class="col-sm-5">
+			      <input type="text" class="form-control" id="name" name="name">
+			    </div>
+			    <label for="age" class="col-sm-1 control-label">年龄：</label>
+			    <div class="col-sm-5">
+			      <select class="form-control" id="age" name="age">
+						</select>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="rfs" class="col-sm-1 control-label">学历：</label>
+			    <div class="col-sm-5">
+			      <input type="text" class="form-control" id="rfs" name="rfs">
+			    </div>
+			    <label for="profession" class="col-sm-1 control-label">专业：</label>
+			    <div class="col-sm-5">
+			      <input type="text" class="form-control" id="profession" name="profession">
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="like" class="col-sm-1 control-label">爱好：</label>
+			    <div class="col-sm-11">
+			      <input type="text" class="form-control" id="like" name="like">
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="specialty" class="col-sm-1 control-label">特长：</label>
+			    <div class="col-sm-11">
+			      <input type="text" class="form-control" id="specialty" name="specialty">
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="pac" class="col-sm-1 control-label">优缺点：</label>
+			    <div class="col-sm-11">
+			      <input type="email" class="form-control" id="pac" name="pac">
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="plan" class="col-sm-1 control-label">人生规划：</label>
+			    <div class="col-sm-11">
+			      <textarea class="form-control" rows="5" id="plan" name="plan"></textarea>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			    <label for="selfintro" class="col-sm-1 control-label">自我描述：</label>
+			    <div class="col-sm-11">
+			      <textarea class="form-control" rows="5" id="selfintro" name="selfintro"></textarea>
+			    </div>
+			  </div>
+			  
+			  <div class="form-group">
+			  	<div class="col-sm-4 col-lg-offset-4">
+			    	<button type="button" class="btn btn-primary btn-lg btn-block" onclick="changeStationMasterInfo();">修改</button>
+			    </div>
+			  </div>
+			  
+			</form>
+  	</div>  
+
+  <script src="../../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+  <script src="../../bootstrap/js/bootstrap.min.js"></script>
+  <script src="../js/stationMasterInfo.js"></script>
+  </body>
+</html>

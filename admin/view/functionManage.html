@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人测试：Jsonker学习网站</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/funcionManage.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	
+ <!----------------------------------主体内容------------------------------------------------>
+  	<p id="hiddenpage" hidden>1</p>
+  	<div class="header">
+		  <span>功能列表</span>
+		  <button type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">添加</button>
+		  <div></div>
+		</div>
+  	<div id="" style="height: 10px; width: 100%;"></div>
+  	<div class="row">
+		  <div class="col-xs-12 col-md-12 ">
+		  	<div class="table-responsive">
+				  <table class="table table-hover table-striped" id="itable">
+			  		<tr>
+			  			<th>编号</th>
+			  			<th>父功能编号</th>
+			  			<th>功能名称</th>
+			  			<th>连接地址</th>
+			  			<th>功能层级</th>
+			  			<th>状态</th>
+			  			<th></th>
+			  			<th></th>
+			  		</tr>
+			  	</table>
+				</div>
+		  </div>
+		</div>
+	
+	
+	<nav aria-label="Page navigation" style="text-align: center;" class="navbar-fixed-bottom">
+	  <ul class="pagination">
+	    <li>
+	      <a href="#" aria-label="Previous" onclick="pageContro(false);">
+	        <span aria-hidden="true">&laquo;</span>
+	      </a>
+	    </li>
+	     
+	    <li id="pageli">
+	      <a href="#" aria-label="Next" onclick="pageContro(true);">
+	        <span aria-hidden="true">&raquo;</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
+<!----------------------------------主体内容------------------------------------------------>
+
+<!----------------------------------模态框-添加------------------------------------------------->
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form style="text-align: center;" id="addform">	
+					<div class="form-group">
+					    <label class="sr-only" for="afpid">fpid</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">父功能编号</div>
+					      	<input type="text" class="form-control" id="afpid" name="fpid" placeholder="fpid">
+					    </div>
+					</div>
+					
+					<div class="form-group">
+					    <label class="sr-only" for="afname">fname</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">功能名称</div>
+					      	<input type="text" class="form-control" id="afname" name="fname" placeholder="fname">
+					    </div>
+					</div>
+					
+					<div class="form-group">
+					    <label class="sr-only" for="afurl">furl</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">连接地址</div>
+					      	<input type="text" class="form-control" id="afurl" name="furl" placeholder="furl">
+					    </div>
+					</div>
+					
+					<div class="form-group">
+					    <label class="sr-only" for="afgrade">fgrade</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">功能层级</div>
+					      	<select class="form-control" id="afgrade" name="fgrade">
+						      	<option >1</option>
+						      	<option >2</option>
+						      	<option >3</option>
+									</select>
+					    </div>
+					</div>
+					
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	        <button type="button" class="btn btn-primary" onclick="addFunction();">提交</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+<!----------------------------------模态框-添加----------------------------------------------->
+
+<!----------------------------------模态框-修改----------------------------------------------->
+	<!-- Modal -->
+		<div class="modal fade" id="changeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">功能信息修改</h4>
+		      </div>
+		      <div class="modal-body">
+		      	<form style="text-align: center;" id="changeform">
+					<div class="form-group">
+					    <label class="sr-only" for="cfid">fid</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">功能编号</div>
+					      	<input type="text" class="form-control" id="cfid" name="fid" placeholder="username">
+					    </div>
+					</div>
+					
+					<div class="form-group">
+					    <label class="sr-only" for="cfpid">fpid</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">父功能编号</div>
+					      	<input type="text" class="form-control" id="cfpid" name="fpid" placeholder="username">
+					    </div>
+					</div>
+					
+					<div class="form-group">
+					    <label class="sr-only" for="cfname">fname</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">功能名称</div>
+					      	<input type="text" class="form-control" id="cfname" name="fname" placeholder="username">
+					    </div>
+					</div>
+					
+					<div class="form-group">
+					    <label class="sr-only" for="cfurl">furl</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">连接地址</div>
+					      	<input type="text" class="form-control" id="cfurl" name="furl" placeholder="username">
+					    </div>
+					</div>
+					
+					<div class="form-group">
+					    <label class="sr-only" for="cfgrade">fgrade</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">功能层级</div>
+					      	<select class="form-control" id="cfgrade" name="fgrade">
+						      	<option >1</option>
+						      	<option >2</option>
+						      	<option >3</option>
+									</select>
+					    </div>
+					</div>
+					
+					<div class="form-group">
+					    <label class="sr-only" for="cfstatus">fstatus</label>
+					    <div class="input-group">
+					      	<div class="input-group-addon">禁用</div>
+					      	<input type="text" class="form-control" id="cfstatus" name="fstatus" placeholder="username">
+					    </div>
+					</div>
+					  
+			   	</form>  
+						    
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+		        <button type="button" class="btn btn-primary" onclick="changeFunctionDeed();">提交</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+<!----------------------------------模态框-修改----------------------------------------------->
+
+<!----------------------------------模态框-删除----------------------------------------------->
+<!-- Small modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+			<div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		    <h4 class="modal-title" id="myModalLabel">警告</h4>
+		  </div>
+		  <div class="modal-body">
+			        你正在删除id=<p id="duid"></p>的功能，请确定你的想法
+			  </div>
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-default" data-dismiss="modal">点错了</button>
+		    <button type="button" class="btn btn-primary" onclick="delFunction();">确定</button>
+		  </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------模态框-删除----------------------------------------------->
+
+    <script src="../../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/functionManage.js"></script>
+  </body>
+</html>

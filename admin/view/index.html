@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>个人测试：Jsonker学习网站</title>
+    <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/index.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="row" id="topbar">
+		  <div class="col-xs-12 col-md-12">
+		  	<nav class="navbar navbar-default">
+			  <div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="#" id="name"></a>
+			    </div>
+			  </div><!-- /.container-fluid -->
+			</nav>
+		  </div>
+		</div>
+	
+		<div class="row">
+		  <div class="col-xs-0 col-md-2" >
+		  	<!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse pad_mag_0" id="bs-example-navbar-collapse-1">
+		      <ul class="nav nav-pills nav-stacked navcolor">	
+		      	<li id="ul">
+		      		<a href="../../index/view/index.html">返回主页</a>
+		      	</li>
+		      	<li>
+		      		<a href="#" data-toggle="modal" data-target=".bs-example-modal-sm">退出系统</a>
+		      	</li>
+					</ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div>
+		  <div class="col-xs-12 col-md-10">
+		  	<iframe src="" width="100%" id="iframe"></iframe>
+		  </div>
+		</div>
+<!----------------------------------模态框-退出----------------------------------------------->
+<!-- Small modal -->
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+			<div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		    <h4 class="modal-title" id="myModalLabel">提示</h4>
+		  </div>
+		  <div class="modal-body">
+			       你真的想退出系统吗？
+			  </div>
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-default" data-dismiss="modal">点错了</button>
+		    <button type="button" class="btn btn-primary" onclick="exitSystem();">确定</button>
+		  </div>
+    </div>
+  </div>
+</div>
+<!----------------------------------模态框-退出----------------------------------------------->
+
+    <script src="../../jquery-3.2.1/jquery-3.2.1.min.js"></script>
+    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>
