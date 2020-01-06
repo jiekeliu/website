@@ -470,7 +470,7 @@ class connFun{
 		return $re;
 	}
 	
-	/*authority_user表查询操作
+	/*navigationbar_queryAll查寻操作
 	*/
 	public function navigationbar_queryAll(){
 		$str = "SELECT *FROM `navigationbar`";
